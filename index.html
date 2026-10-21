@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz cumpleaños, Nemesis ❤️</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, serif;
+      color: #70243d;
+      text-align: center;
+      background: linear-gradient(
+        145deg, #fff0f3, #fbd0dc, #fff5ed
+      );
+      overflow-x: hidden;
+    }
+
+    .contenedor {
+      width: 90%;
+      max-width: 430px;
+      margin: 35px auto;
+      padding: 28px 20px;
+      background: rgba(255, 255, 255, 0.78);
+      border: 1px solid white;
+      border-radius: 25px;
+      box-shadow: 0 12px 35px #9c40552b;
+      position: relative;
+      z-index: 1;
+    }
+
+    .corazon {
+      font-size: 55px;
+      animation: latido 1.2s infinite;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin: 12px 0;
+      color: #b52f59;
+    }
+
+    h2 {
+      font-weight: normal;
+      font-size: 22px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 16px;
+    }
+
+    button {
+      border: none;
+      border-radius: 30px;
+      padding: 14px 22px;
+      margin: 10px 4px;
+      background: #c83762;
+      color: white;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 5px 12px #c8376233;
+    }
+
+    button:active {
+      transform: scale(0.96);
+    }
+
+    #carta, #sorpresa {
+      display: none;
+      margin-top: 22px;
+      padding: 18px;
+      background: #fff5f7;
+      border-radius: 18px;
+      border: 1px dashed #e8a0b5;
+      animation: aparecer 0.8s ease;
+    }
+
+    .firma {
+      font-style: italic;
+      color: #b52f59;
+      font-size: 18px;
+    }
+
+    .flotante {
+      position: fixed;
+      bottom: -40px;
+      z-index: 0;
+      pointer-events: none;
+      animation: subir 7s linear forwards;
+    }
+
+    @keyframes latido {
+      50% { transform: scale(1.15); }
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes subir {
+      to {
+        transform: translateY(-115vh) rotate(25deg);
+        opacity: 0;
+      }
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 12px;
+      color: #99536a;
+    }
+
+    .foto {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px #70243d33;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="contenedor">
+    <div class="corazon">❤️</div>
+
+    <p>Hoy es un día muy especial...</p>
+
+    <h1>¡Feliz cumpleaños!</h1>
+
+    <h2>Mi querida Princesa 🎂</h2>
+
+    <img
+      src="IMAGENES/IMG-20260811-WA0051.jpg"
+      alt="Nosotros juntos"
+      class="foto"
+    >
+    
+
+    <p>
+      Hoy celebra el mundo la llegada de una persona
+      maravillosa, y yo tengo la suerte de tenerte
+      en mi vida.
+    </p>
+
+    <p>
+
+      <img
+  src="IMÁGENES/IMG-20260811-WA0052.jpg"
+  alt="Nemesis"
+  class="foto"
+>
+
+<p>Una mujer maravillosa que hace mi mundo más bonito. ❤️</p>
+
+<img
+  src="IMAGENES/IMG-20260627-WA0108.jpg"
+  alt="Nemesis con su gatito"
+  class="foto"
+>
+    
+      Preparé algo especial para ti.
+      Toca el botón y abre tu regalo. 💌
+    </p>
+
+    <button onclick="abrirCarta()">
+      💌 Abrir mi carta
+    </button>
+
+    <section id="carta">
+      <h2>Para ti, Nemesis ❤️</h2>
+
+      <p>
+        Mi amor, deseo que este nuevo año de tu vida
+        esté lleno de felicidad, salud, sueños cumplidos
+        y momentos que te hagan sonreír.
+      </p>
+
+      <p>
+        Gracias por ser parte de mi vida, por cada
+        sonrisa, cada abrazo y cada recuerdo que
+        construimos juntos.
+      </p>
+
+      <p>
+        No existe un regalo que pueda expresar
+        completamente lo especial que eres para mí.
+        Quiero seguir creando recuerdos contigo y
+        acompañarte en cada nueva aventura.
+      </p>
+
+      <p class="firma">
+        Te quiero muchísimo. ❤️
+      </p>
+
+      <button onclick="abrirSorpresa()">
+        🎁 Descubre otra sorpresa
+      </button>
+    </section>
+
+    <section id="sorpresa">
+      <div style="font-size: 48px;">🎂💖🎉</div>
+      <h2>¡Pide un deseo, mi amor!</h2>
+      <p>
+        Que la vida te regale tantas razones para
+        sonreír como estrellas hay en el cielo.
+      </p>
+      <p>
+        Hoy, mañana y siempre, mereces cosas bonitas.
+      </p>
+      <p>Feliz cumpleaños, mi Nemesis. 💗</p>
+    </section>
+
+    <footer>
+      Hecho con amor, especialmente para ti. ❤️
+    </footer>
+  </main>
+
+  <script>
+    function abrirCarta() {
+      document.getElementById("carta").style.display = "block";
+
+      document.getElementById("carta").scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+
+      crearCorazones();
+    }
+
+    function abrirSorpresa() {
+      document.getElementById("sorpresa").style.display = "block";
+
+      document.getElementById("sorpresa").scrollIntoView({
+        behavior: "smooth",
+        block: "nearest"
+      });
+
+      crearCorazones();
+    }
+
+    function crearCorazones() {
+      for (let i = 0; i < 15; i++) {
+        const corazon = document.createElement("span");
+
+        corazon.className = "flotante";
+        corazon.textContent = Math.random() > 0.5 ? "❤️" : "💗";
+        corazon.style.left = Math.random() * 100 + "vw";
+        corazon.style.fontSize = (18 + Math.random() * 22) + "px";
+        corazon.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+        document.body.appendChild(corazon);
+
+        setTimeout(() => corazon.remove(), 8500);
+      }
+    }
+  </script>
+
+</body>
+</html>
